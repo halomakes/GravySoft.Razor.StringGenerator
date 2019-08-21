@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <PackageProjectUrl>https://github.com/halomademeapc/GravySoft.Razor.StringGenerator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/halomademeapc/GravySoft.Razor.StringGenerator</RepositoryUrl>
+    <Authors>Alex Griffith</Authors>
+    <Company>Force of Gravy</Company>
+    <Description>Render Razor views to strings in ASP.NET Core</Description>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryType>razor,string,aspnetcore</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GravySoft.Razor.StringGenerator\GravySoft.Razor.StringGenerator.csproj" />
+  </ItemGroup>
+
+</Project>

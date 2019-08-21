@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GravySoft.Razor.StringGenerator.NetFramework</id>
+    <version>1.0.0</version>
+    <authors>Alex Griffith</authors>
+    <owners>Alex Griffith</owners>
+    <projectUrl>https://github.com/halomademeapc/GravySoft.Razor.StringGenerator</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <repository url="https://github.com/halomademeapc/GravySoft.Razor.StringGenerator" />
+    <description>Render Razor views to strings in ASP.NET</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <dependencies>
+      <group targetFramework="net40">
+        <dependency id="Microsoft.AspNet.Mvc" version="5.0.0" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="GravySoft.Razor.StringGenerator" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.Web.Infrastructure" />
+      <frameworkAssembly assemblyName="System" />
+      <frameworkAssembly assemblyName="System.Core" />
+      <frameworkAssembly assemblyName="System.Data" />
+      <frameworkAssembly assemblyName="System.Data.DataSetExtensions" />
+      <frameworkAssembly assemblyName="System.Net.Http" />
+      <frameworkAssembly assemblyName="System.Web" />
+      <frameworkAssembly assemblyName="System.Web.Routing" />
+      <frameworkAssembly assemblyName="System.Xml" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

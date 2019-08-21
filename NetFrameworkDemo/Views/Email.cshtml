@@ -1,0 +1,14 @@
+﻿@model NetFrameworkDemo.Models.EmailModel
+@{
+    ViewBag.Title = "Email";
+    Layout = null;
+}
+
+<h2>Email</h2>
+<h3>@Model.FirstName @Model.LastName</h3>
+<ul>
+    @foreach (var color in Model.FavoriteColors)
+    {
+        <li>@color</li>
+    }
+</ul>
