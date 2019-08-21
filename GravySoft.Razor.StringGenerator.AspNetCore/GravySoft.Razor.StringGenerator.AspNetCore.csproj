@@ -13,6 +13,8 @@
     <Description>Render Razor views to strings in ASP.NET Core</Description>
     <PackageIconUrl></PackageIconUrl>
     <RepositoryType>razor,string,aspnetcore</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>

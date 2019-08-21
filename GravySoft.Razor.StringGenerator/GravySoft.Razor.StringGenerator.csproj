@@ -14,5 +14,7 @@
     <RepositoryUrl>https://github.com/halomademeapc/GravySoft.Razor.StringGenerator</RepositoryUrl>
     <PackageIconUrl></PackageIconUrl>
     <PackageTags>razor,string</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 </Project>
