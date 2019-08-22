@@ -1,4 +1,4 @@
-# GravySoft.Razor.StringGenerator [![NuGet Logo](https://raw.githubusercontent.com/NuGet/Media/master/Images/MainLogo/32x32/nuget_32.png)](https://nuget.infarmbureau.com/packages/GravySoft.Razor.StringGenerator)
+# GravySoft.Razor.StringGenerator [![NuGet Logo](https://raw.githubusercontent.com/NuGet/Media/master/Images/MainLogo/32x32/nuget_32.png)](https://www.nuget.org/packages/GravySoft.Razor.StringGenerator)
 
 Service for rendering Razor MVC views to strings. This can be used for sending emails, generating PDFs, and any number of things.
 
