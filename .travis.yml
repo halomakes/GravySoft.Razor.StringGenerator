@@ -1,0 +1,16 @@
+language: csharp
+jobs:
+  include:
+    - dotnet: 3.1
+      mono: none
+      script:
+        - dotnet restore GravySoft.Razor.StringGenerator/GravySoft.Razor.StringGenerator.csproj
+        - dotnet restore GravySoft.Razor.StringGenerator.AspNetCore/GravySoft.Razor.StringGenerator.AspNetCore.csproj
+        - dotnet build GravySoft.Razor.StringGenerator/GravySoft.Razor.StringGenerator.csproj
+        - dotnet build GravySoft.Razor.StringGenerator.AspNetCore/GravySoft.Razor.StringGenerator.AspNetCore.csproj
+    - mono:
+        - latest
+      install:
+        - nuget restore GravySoft.Razor.StringGenerator.sln
+      script:
+        - msbuild GravySoft.Razor.StringGenerator.sln /p:Configuration=Release /target:GravySoft_Razor_StringGenerator_NetFramework
