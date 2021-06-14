@@ -19,18 +19,18 @@ namespace GravySoft.Razor.StringGenerator.AspNetCore
     /// </summary>  
     public class RazorViewToStringRenderer : IRazorViewToStringRenderer
     {
-        private readonly IRazorViewEngine _viewEngine;
-        private readonly ITempDataProvider _tempDataProvider;
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IRazorViewEngine viewEngine;
+        private readonly ITempDataProvider tempDataProvider;
+        private readonly IServiceProvider serviceProvider;
 
         public RazorViewToStringRenderer(
             IRazorViewEngine viewEngine,
             ITempDataProvider tempDataProvider,
             IServiceProvider serviceProvider)
         {
-            _viewEngine = viewEngine;
-            _tempDataProvider = tempDataProvider;
-            _serviceProvider = serviceProvider;
+            this.viewEngine = viewEngine;
+            this.tempDataProvider = tempDataProvider;
+            this.serviceProvider = serviceProvider;
         }
 
         /// <summary>  
@@ -56,7 +56,7 @@ namespace GravySoft.Razor.StringGenerator.AspNetCore
                     },
                     new TempDataDictionary(
                         actionContext.HttpContext,
-                        _tempDataProvider),
+                        tempDataProvider),
                     output,
                     new HtmlHelperOptions());
 
@@ -68,13 +68,13 @@ namespace GravySoft.Razor.StringGenerator.AspNetCore
 
         private IView FindView(ActionContext actionContext, string viewName)
         {
-            var getViewResult = _viewEngine.GetView(executingFilePath: null, viewPath: viewName, isMainPage: true);
+            var getViewResult = viewEngine.GetView(executingFilePath: null, viewPath: viewName, isMainPage: true);
             if (getViewResult.Success)
             {
                 return getViewResult.View;
             }
 
-            var findViewResult = _viewEngine.FindView(actionContext, viewName, isMainPage: true);
+            var findViewResult = viewEngine.FindView(actionContext, viewName, isMainPage: true);
             if (findViewResult.Success)
             {
                 return findViewResult.View;
@@ -91,7 +91,7 @@ namespace GravySoft.Razor.StringGenerator.AspNetCore
         private ActionContext GetActionContext()
         {
             var httpContext = new DefaultHttpContext();
-            httpContext.RequestServices = _serviceProvider;
+            httpContext.RequestServices = serviceProvider;
             return new ActionContext(httpContext, new RouteData(), new ActionDescriptor());
         }
     }
